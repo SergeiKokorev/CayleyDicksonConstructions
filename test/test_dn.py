@@ -28,4 +28,4 @@ if __name__ == "__main__":
     print(f'DualNumber LHS scalar division : {dn1 / 2.5}')
     print(f'DualNumber RHS scalar division : {2.5 / dn1}')
     print(f'DualNumber absolute value : {abs(dn1)}')
-    print(f'DualNumber module : {dn1.module}')
+    print(f'DualNumber module : {dn1.mod}')

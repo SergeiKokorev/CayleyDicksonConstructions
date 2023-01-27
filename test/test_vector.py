@@ -8,13 +8,13 @@ DIRECTORY = os.path.abspath(os.path.join(
 ))
 sys.path.append(DIRECTORY)
 
-from DualQuaternions.vector import Vector as vct
+from HyperComplexSystems.vector import Vector as vct
 
 
 if __name__ == "__main__":
 
-    v1 = vct(vector=[1.0, 2.0, 3.0])
-    v2 = vct(vector=[4.0, 5.0, 6.0])
+    v1 = vct(1.0, 2.0, 3.0)
+    v2 = vct(4.0, 5.0, 6.0)
 
     print('Vector 1', end='\t')
     print(v1)
