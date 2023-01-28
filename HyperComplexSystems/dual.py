@@ -84,7 +84,7 @@ class Dual(CayleyDicksonPrototype):
         return Dual(real=self.Real - number.Real, dual=self.Dual - number.Dual)
 
     def __rsub__(self, number: object) -> object:
-        number = self.build_dual(number)
+        number = self._build_dual(number)
         return Dual(real=number.Real - self.Real, dual=number.Dual - self.Dual)
 
     def __mul__(self, number: object) -> object:
@@ -98,3 +98,10 @@ class Dual(CayleyDicksonPrototype):
     def __truediv__(self, number: object) -> object:
         number = self._build_dual(number)
         return None
+
+
+class Double(CayleyDicksonPrototype, Dual):
+    
+    def __mul__(self, number: object) -> object:
+        number = self._build_dual(number)
+        return Double(real=self.Real * number.Real, )
